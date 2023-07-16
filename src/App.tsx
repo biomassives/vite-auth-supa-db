@@ -97,7 +97,7 @@ function App() {
 
                   <h2>Checkin description</h2>
                   <input type="text" id="checkin" name="checkin" />
-                  </section>
+                  
                   <button id="createThing" className="btn btn-success"
                     onClick={e => createThing()}>
                     Create a Thing
