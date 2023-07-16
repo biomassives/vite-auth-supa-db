@@ -87,7 +87,7 @@ function App() {
 
                 <section id="myThings" className='py-4'>
 
-                  <h2>My Things</h2>
+                  <h2>Biodiversity credit earning activity</h2>
 
                   {
                     myThings.length ?
@@ -100,7 +100,7 @@ function App() {
                   
                   <button id="createThing" className="btn btn-success"
                     onClick={e => createThing()}>
-                    Create a Thing
+                    Eco Op Checkin
                   </button>
 
                 </section>
@@ -119,12 +119,12 @@ function App() {
 
       <section id="allThings" className='py-4'>
 
-        <h2>All Things</h2>
+        <h2>All Eco Op Checkins</h2>
 
         {
           things.length ?
             <ThingsTable things={things} /> :
-            <p>Looks like no one has created a Thing yet! Maybe you could be first!!</p>
+            <p>Looks like no one has created a Checkin yet! Maybe you could be first!!</p>
         }
 
       </section>
