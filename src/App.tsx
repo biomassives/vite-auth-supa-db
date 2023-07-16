@@ -37,7 +37,7 @@ function App() {
     async () => {
 
       if(!user) {
-        console.error('You must be authenticated to create a new Thing!');
+        console.error('Please authenticate to create checin, or use https://docs.google.com/spreadsheets/d/1Y59WXnzDQqjFwJ0tcp1jlDHVl9R0Wu5_3-knEW4L7k8/edit?usp=sharing! for project checkin data.');
         return
       }
 
@@ -68,7 +68,7 @@ function App() {
   return (
     <div className="App container py-4 px-3">
 
-      <h1>Supabase+React+Vite Example</h1>
+      <h1>Eco Ops Checkins</h1>
 
       <UserContext.Provider value={user}>
         <ThingsContext.Provider value={[things, setThings]}>
@@ -92,9 +92,12 @@ function App() {
                   {
                     myThings.length ?
                       <ThingsTable things={myThings} user={user!}/> :
-                      <p>You haven't created any Things yet!</p>
+                      <p>You have not posted a checkin yet.</p>
                   }
 
+                  <h2>Checkin description</h2>
+                  <input type="text" id="checkin" name="checkin" />
+                  </section>
                   <button id="createThing" className="btn btn-success"
                     onClick={e => createThing()}>
                     Create a Thing
